@@ -1,0 +1,29 @@
+{
+  "name": "isbroke",
+  "version": "0.0.1",
+  "description": "Auto detects breaking change in public API of a TypeScript library",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "build:watch": "tsc -w -p .",
+    "run": "nodemon ./lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "run-p build:watch run"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Michael James",
+  "license": "ISC",
+  "devDependencies": {
+    "node-supervisor": "^1.0.2",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.2"
+  },
+  "dependencies": {
+    "@types/node": "^8.0.24",
+    "typescript": "^2.4.2"
+  }
+}
