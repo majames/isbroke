@@ -8,7 +8,8 @@
     "build": "tsc -p .",
     "build:watch": "tsc -w -p .",
     "run": "nodemon ./lib/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "watch": "run-p build:watch run"
   },
   "repository": {
@@ -18,9 +19,12 @@
   "author": "Michael James",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^20.0.7",
+    "jest": "^20.0.4",
     "node-supervisor": "^1.0.2",
     "nodemon": "^1.11.0",
-    "npm-run-all": "^4.0.2"
+    "npm-run-all": "^4.0.2",
+    "ts-jest": "^20.0.10"
   },
   "dependencies": {
     "@types/node": "^8.0.24",
